@@ -10,9 +10,7 @@ const readline = require("readline");
 
 const input = readline.createInterface(process.stdin, process.stdout);
 
-input.question("Insira o valor do seu salario bruto:", (value) => {
-  const salarioBruto = Number(value);
-
+function calculaIR(salarioBruto) {
   if (salarioBruto >= 2259.21 && salarioBruto <= 2826.55) {
     const parcelaIR = salarioBruto * 0.075;
     console.log(
@@ -46,8 +44,6 @@ input.question("Insira o valor do seu salario bruto:", (value) => {
         )}`
     );
   } else {
-    console.log("Salário bruto fora da faixa de cálculo de IR.");
+    return "Salário bruto fora da faixa de cálculo de IR.";
   }
-
-  input.close();
-});
+}
