@@ -11,5 +11,8 @@ const salario = 1234.45
 // Calculo para saber o INSS: R$ 1.500 x (valor da alíquota em porcentagem) – 21,18 = R$ 113,82.
 
 if(salario <= 1412){
-
-}
+    let salarioAtualizado = salario * 1500
+    console.log(salarioAtualizado)
+} else if (salario >= 1412.01 && salario <= 2666.68){
+    let salarioAtualizado = salario * 1500 - 21.18
+    console.log(salarioAtualizado)}
